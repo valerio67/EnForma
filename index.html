@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script defer type="text/javascript" src="main.js"></script>
+    <title>EnForma</title>
+</head>
+<body>
+    <form action="" id="form" method="post">
+        <p>
+            <label for="sex">Sexo:&nbsp;&nbsp;</label>
+            <select id="sex" name="sex" onchange= " main (), gebCalcPa (), gebCalcPi (), etaCalc(), paCalc(), piCalc(), mifflinCalc (), average ();">
+                <option value="fem">Femenino</option>
+                <option value="masc" selected>Masculino</option>
+            </select>
+        <button id="reset" type="reset">Limpiar todo</button>
+        </p>
+
+        <p>
+            <label for="weight">Peso:&nbsp;&nbsp;</label>
+            <input type="number" id="weight" placeholder="Peso" size="10" onblur= " main (), gebCalcPa (), gebCalcPi (), etaCalc(), paCalc(), piCalc(), mifflinCalc (), average ();"/> kg
+        </p>
+
+        <p>
+            <label for="height">Altura:</label>
+            <input type="number" id="height" placeholder="Altura" size="10" onblur= " main (), gebCalcPa (), gebCalcPi (), etaCalc(), paCalc(), piCalc(), mifflinCalc (), average ();"/><span> </span>
+            <select id="heightUnits" name="heightunits" onchange=" main (), gebCalcPa (), gebCalcPi (), etaCalc(), paCalc(), piCalc(), mifflinCalc (), average ();">
+                <option value="cm">cm</option>
+                <option value="m">m</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="age">Edad:&nbsp;&nbsp;</label>
+            <input type="number" id="age" placeholder="Edad" size="10" onblur=" main (), gebCalcPa (), gebCalcPi (), etaCalc(), paCalc(), piCalc(), mifflinCalc (), average ();"/>
+        </p>
+
+        <!-- GEB ETA / AF -->
+        <label for="gebPa">GEB PA:</label>
+        <input id="gebPa" type="text" readonly size="6"/>&nbsp;
+        <label for="gebPi">GEB PI:</label>
+        <input id="gebPi" type="text" readonly size="6"/>&nbsp;
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <label for="eta">ETA/AF:</label>
+            <input id="eta" type="text" readonly size="6"/><br><br>
+        </p>
+
+        
+        <!-- Resultados GET H-B-->
+        <label for="getPa">Harris-Benedict PA:</label>
+        <input id="getPa" type="text" readonly size="6"/><br><br>
+
+        <label for="getPi">Harris-Benedict PI:</label>&nbsp;
+        <input id="getPi" type="text" readonly size="6"/>
+
+        <!-- Resultados GET MIFFLIN-->
+        <br><br>
+        <label for="getMifflin">Mifflin:</label>
+        <input id="getMifflin" type="text" readonly size="6" onblur=" main (), gebCalcPa (), gebCalcPi (), etaCalc(), paCalc(), piCalc(), mifflinCalc (), average ();"/>
+
+        <!-- PROMEDIO -->
+        <label for= 'ave'><b>Promedio:</b></label>
+        <input id='ave' type="text" readonly size="6" onblur=" main (), gebCalcPa (), gebCalcPi (), etaCalc(), paCalc(), piCalc(), mifflinCalc (), average ();"/>
+
+
+    </form>
+    
+</body>
+</html>
